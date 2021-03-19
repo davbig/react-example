@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+// @ts-nocheck
 import './App.css';
+import React from 'react';
+import MyHeader from './components/Header';
+import Section from './components/Section';
+import ImageBox from './components/ImageBox';
+import TestComp from './components/TestComp';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyHeader headline={'My First React App'} />
+      <Welcome name={'Super-Code'} />
+      <Section reverse={false} center={true}>
+        <ImageBox imageSize={500} />
+        <ImageBox caption={'Custom Caption :)'} />
+        <ImageBox />
+      </Section>
+      <TestComp />
     </div>
-  );
+  )
 }
 
 export default App;
